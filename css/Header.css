@@ -1,5 +1,49 @@
 .header {
-  background-color: aqua;
-  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .bell {
+  background-color: white;
+  border-radius: 50px;
+  font-size: 1.8rem;
+}
+
+.header .logo {
+  font-size: 3rem;
+  margin: 1rem 0.5rem 0rem 0.3rem;
+  color: #5a00ad;
+}
+
+.header .btn {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header .btn .login {
+  background-color: #5a00ad;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  margin: 0rem 0.5rem 0rem 0.3rem;
+  font-size: 1rem;
+}
+
+.header .btn .logout {
+  background-color: #5a00ad;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.3rem;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=Header.css.map */

@@ -1,10 +1,24 @@
 import React from "react";
 import "./Header.scss";
+import { FiBell } from "react-icons/fi";
+import { IoLogoSlack } from "react-icons/io";
+import SearchBox from "../components/SearchBox";
 
 function Header() {
   return (
-    <div>
-      <h1 className='header'>header</h1>
+    <div className='header'>
+      <div className='btn'>
+        <button className='login'>ورود</button>
+
+        <button className='logout'>ثبت نام</button>
+        <div className='bell'>
+          <FiBell />
+        </div>
+      </div>
+      <SearchBox />
+      <div className='logo'>
+        <IoLogoSlack />
+      </div>
     </div>
   );
 }

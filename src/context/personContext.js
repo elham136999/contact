@@ -1,5 +1,10 @@
-import React, { useContext, useState, useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import reducer from "../reducer/reducerperson";
+import {
+  GET_USERS_BEGIN,
+  SUCCESE_GET_USERS,
+  ERROR_GET_USERS,
+} from "../components/actions";
 
 export const person = "https://reqres.in/api/users";
 
@@ -10,18 +15,19 @@ const initialState = {
 
 const PersonContext = React.createContext();
 
-export function PersonProvider({ childern }) {
+export const PersonProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const GetUsers = async (url) => {
-    dispatch({ type: "GET_USERS_BEGIN" });
+    dispatch({ type: GET_USERS_BEGIN });
     try {
       const response = await fetch(url);
       const persons = await response.json();
+      console.log(persons);
 
-      dispatch({ type: "SUCCESE_GET_USERS", payload: persons.data });
+      dispatch({ type: SUCCESE_GET_USERS, payload: persons.data });
     } catch {
-      dispatch({ type: "ERROR_GET_USERS" });
+      dispatch({ type: ERROR_GET_USERS });
     }
   };
   useEffect(() => {
@@ -29,11 +35,11 @@ export function PersonProvider({ childern }) {
   }, []);
 
   return (
-    <PersonContext.Provider value={{ GetUsers }}>
-      {childern}
+    <PersonContext.Provider value={{ ...state, GetUsers }}>
+      {children}
     </PersonContext.Provider>
   );
-}
+};
 
 export const UsePersonContext = () => {
   return useContext(PersonContext);

@@ -1,9 +1,11 @@
 import React from "react";
+import "./Main.scss";
+import Header from "../components/Header";
 
 function Main() {
   return (
-    <div>
-      <h1>main</h1>
+    <div className='main'>
+      <Header />
     </div>
   );
 }

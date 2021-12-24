@@ -1,4 +1,47 @@
+$color-white: rgb(255, 255, 255);
+$color-banafsh: rgb(90, 0, 173);
+
+@mixin btn-style {
+  background-color: $color-banafsh;
+  color: $color-white;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
 .header {
-  background-color: aqua;
-  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .bell {
+    background-color: $color-white;
+    border-radius: 50px;
+    font-size: 1.8rem;
+  }
+  .logo {
+    font-size: 3rem;
+    margin: 1rem 0.5rem 0rem 0.3rem;
+    color: $color-banafsh;
+  }
+  .btn {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+
+    .login {
+      @include btn-style;
+      padding: 0.5rem 0.7rem;
+      margin: 0rem 0.5rem 0rem 0.3rem;
+
+      font-size: 1rem;
+    }
+    .logout {
+      @include btn-style;
+      padding: 0.5rem;
+      margin: 0rem 0.5rem 0rem 0.3rem;
+      font-size: 1rem;
+    }
+  }
 }
