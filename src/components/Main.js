@@ -5,7 +5,7 @@ import Header from "../components/Header";
 function Main() {
   return (
     <div className='main'>
-      <Header />
+      <Header style={{ opacity: 1 }} />
     </div>
   );
 }

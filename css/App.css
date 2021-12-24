@@ -1,5 +1,5 @@
 .App {
-  background-image: url("../images/pexels-ben-mack-6775241.jpg");
+  background-image: linear-gradient(#dec6f5, #fefffe);
   background-size: cover;
   height: 100vh;
 }

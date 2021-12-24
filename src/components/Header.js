@@ -2,7 +2,6 @@ import React from "react";
 import "./Header.scss";
 import { FiBell } from "react-icons/fi";
 import { IoLogoSlack } from "react-icons/io";
-import SearchBox from "../components/SearchBox";
 
 function Header() {
   return (
@@ -15,7 +14,6 @@ function Header() {
           <FiBell />
         </div>
       </div>
-      <SearchBox />
       <div className='logo'>
         <IoLogoSlack />
       </div>
