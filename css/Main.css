@@ -1,14 +1,10 @@
 .main {
   width: 80vw;
   height: 90vh;
-  background-color: white;
+  background-color: rgba(250, 248, 248, 0.7);
   margin: auto;
   position: relative;
   top: 5%;
   border-radius: 10px;
-}
-
-.main :not(:nth-child(1)) {
-  opacity: 1;
 }
 /*# sourceMappingURL=Main.css.map */

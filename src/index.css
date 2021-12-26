@@ -1,6 +1,7 @@
 code {
   font-family: "nazanin";
   font-size: 100%;
+  direction: rtl;
 }
 *,
 *::before,

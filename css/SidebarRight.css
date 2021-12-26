@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=SidebarRight.css.map */
+.sidebar {
+  position: absolute;
+  right: 0;
+  border-left: 1px solid #e4e2e2;
+}
+
+.sidebar .navbar {
+  width: 20vw;
+  height: 90vh;
+  border-radius: 10px;
+}
+
+.sidebar .navbar .contact-list {
+  text-align: justify;
+}
+
+.sidebar .navbar .contact-list li {
+  list-style: none;
+  font-size: 1.2rem;
+  direction: rtl;
+  margin: 2.1rem 1.2rem 1.2rem 0rem;
+}
+
+.sidebar .navbar .contact-list a {
+  color: #494949;
+  text-decoration: none;
+}
+
+.sidebar .navbar .contact-list span {
+  margin-left: 2rem;
+}
+
+.sidebar .logo {
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  color: #494949;
+}
+/*# sourceMappingURL=SidebarRight.css.map */

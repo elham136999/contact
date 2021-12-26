@@ -1,0 +1,32 @@
+.sidebar {
+  position: absolute;
+  right: 0;
+  border-left: 1px solid rgb(228, 226, 226);
+  .navbar {
+    width: 20vw;
+    height: 90vh;
+    border-radius: 10px;
+
+    .contact-list {
+      text-align: justify;
+      li {
+        list-style: none;
+        font-size: 1.2rem;
+        direction: rtl;
+        margin: 2.1rem 1.2rem 1.2rem 0rem;
+      }
+      a {
+        color: rgb(73, 73, 73);
+        text-decoration: none;
+      }
+      span {
+        margin-left: 2rem;
+      }
+    }
+  }
+  .logo {
+    font-size: 1.7rem;
+    margin-left: 0.5rem;
+    color: rgb(73, 73, 73);
+  }
+}
