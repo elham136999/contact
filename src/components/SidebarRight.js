@@ -8,7 +8,7 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 
 function SidebarRight() {
   return (
-    <div className='sidebar'>
+    <aside className='sidebar'>
       <nav className='navbar'>
         <ul className='contact-list'>
           <li>
@@ -31,7 +31,8 @@ function SidebarRight() {
           </li>
         </ul>
       </nav>
-    </div>
+      <img src='../src/images/Reading03.ipg' alt='pii' />
+    </aside>
   );
 }
 

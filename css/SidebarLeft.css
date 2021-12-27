@@ -1,1 +1,21 @@
-/* No CSS *//*# sourceMappingURL=SidebarLeft.css.map */
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.left .phone {
+  width: 12rem;
+  height: 15rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+}
+
+.left .date {
+  width: 12rem;
+  height: 15rem;
+  background-color: white;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+}
+/*# sourceMappingURL=SidebarLeft.css.map */

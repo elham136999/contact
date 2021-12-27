@@ -1,1 +1,18 @@
-
+.left {
+  position: absolute;
+  left: 0;
+  .phone {
+    width: 12rem;
+    height: 15rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 2rem 1rem;
+  }
+  .date {
+    width: 12rem;
+    height: 15rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2rem 1rem;
+  }
+}
