@@ -1,21 +1,33 @@
 .left {
-  position: absolute;
-  left: 0;
-}
-
-.left .phone {
-  width: 12rem;
-  height: 15rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin: 2rem 1rem;
-}
-
-.left .date {
   width: 12rem;
   height: 15rem;
   background-color: white;
   border-radius: 10px;
-  margin: 2rem 1rem;
+  display: inline-block;
+  margin-top: 4rem;
+}
+
+.left .forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.left .forms__input {
+  width: 10rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.left .forms__btn {
+  width: 6rem;
+  height: 2rem;
+  background-color: #5a00ad;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*# sourceMappingURL=SidebarLeft.css.map */

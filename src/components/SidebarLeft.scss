@@ -1,18 +1,33 @@
+$color-white: rgb(255, 255, 255);
+$color-banafsh: rgb(90, 0, 173);
+
 .left {
-  position: absolute;
-  left: 0;
-  .phone {
-    width: 12rem;
-    height: 15rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 2rem 1rem;
+  width: 12rem;
+  height: 15rem;
+  background-color: $color-white;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 4rem;
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 3rem;
+    &__input {
+      width: 10rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
   }
-  .date {
-    width: 12rem;
-    height: 15rem;
-    background-color: white;
-    border-radius: 10px;
-    margin: 2rem 1rem;
+  .forms__btn {
+    width: 6rem;
+    height: 2rem;
+    background-color: $color-banafsh;
+    border-radius: 5px;
+    color: $color-white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
   }
 }

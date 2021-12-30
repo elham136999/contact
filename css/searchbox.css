@@ -1,5 +1,6 @@
 .form {
   margin: 0 8rem;
+  display: inline-block;
 }
 
 .form input {

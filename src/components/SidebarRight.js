@@ -31,7 +31,7 @@ function SidebarRight() {
           </li>
         </ul>
       </nav>
-      <img src='../src/images/Reading03.ipg' alt='pii' />
+      <img src='../images/image1' alt='pii' />
     </aside>
   );
 }
