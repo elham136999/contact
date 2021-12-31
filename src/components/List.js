@@ -1,9 +1,11 @@
 import React from "react";
+import { UseAdduserContext } from "../context/AddUserContext";
 
-function List({ items }) {
+function List() {
+  const { list } = UseAdduserContext();
   return (
     <div>
-      {items.map((item) => {
+      {list.map((item) => {
         const { id, title, number } = item;
         return (
           <article>

@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { PersonProvider } from "../src/context/personContext";
+import { AdduserProvider } from "../src/context/AddUserContext";
 
 ReactDOM.render(
   <PersonProvider>
-    <App />
+    <AdduserProvider>
+      <App />
+    </AdduserProvider>
   </PersonProvider>,
 
   document.getElementById("root")

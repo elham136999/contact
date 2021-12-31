@@ -12,7 +12,8 @@ const reducerperson = (state, action) => {
     case SUCCESE_GET_USERS:
       const user_data = action.payload;
       return { ...state, users: user_data, loading: false };
+    default:
+      throw new Error(`No Matching "${action.type}" - action type`);
   }
-  throw new Error(`No Matching "${action.type}" - action type`);
 };
 export default reducerperson;

@@ -1,37 +1,19 @@
 import React, { useState } from "react";
 import "./SidebarLeft.scss";
-import List from "../components/List";
+import { UseAdduserContext } from "../context/AddUserContext";
 
 function SidebarLeft() {
-  const [name, setName] = useState("");
-  const [numbers, setNumbers] = useState("");
-  const [list, setList] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name && numbers) {
-      const newItem = {
-        id: new Date().getTime().toString(),
-        title: name,
-        number: numbers,
-      };
-      setList([...list, newItem]);
-      setName("");
-      setNumbers("");
-    } else {
-    }
-  };
-
+  const { name, numbers, AddUser } = UseAdduserContext();
   return (
     <aside className='left'>
       <div>
-        <form className='forms' onSubmit={handleSubmit}>
+        <form className='forms' onSubmit={(e) => e.preventDefault()}>
           <input
             type='text'
             className='forms__input'
             placeholder='...نام و نام خانوادگی'
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={AddUser}
           />
           <input
             type='tel'
@@ -39,16 +21,14 @@ function SidebarLeft() {
             placeholder='...شماره مخاطب'
             pattern='[0-9]{11}'
             value={numbers}
-            onChange={(e) => setNumbers(e.target.value)}
+            onChange={AddUser}
           />
           <button className='forms__btn' type='submit'>
             ذخیره مخاطب جدید
           </button>
         </form>
       </div>
-      <div className='date'>
-        <List items={list} />
-      </div>
+      <div className='date'></div>
     </aside>
   );
 }

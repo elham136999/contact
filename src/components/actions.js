@@ -1,3 +1,4 @@
 export const GET_USERS_BEGIN = "GET_USERS_BEGIN";
 export const SUCCESE_GET_USERS = "SUCCESE_GET_USERS";
 export const ERROR_GET_USERS = "ERROR_GET_USERS";
+export const ADD_USER = "ADD_USER";

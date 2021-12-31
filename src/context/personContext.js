@@ -23,7 +23,6 @@ export const PersonProvider = ({ children }) => {
     try {
       const response = await fetch(url);
       const persons = await response.json();
-      console.log(persons);
 
       dispatch({ type: SUCCESE_GET_USERS, payload: persons.data });
     } catch {

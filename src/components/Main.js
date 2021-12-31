@@ -12,6 +12,7 @@ function Main() {
       <Header />
       <SidebarLeft />
       <Contact />
+      <List />
       <SidebarRight />
     </div>
   );

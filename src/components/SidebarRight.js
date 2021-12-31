@@ -17,17 +17,17 @@ function SidebarRight() {
           </li>
           <li>
             {" "}
-            <TiContacts className='logo' /> <Link to='/'>مخاطبین</Link>
+            <TiContacts className='logo' /> <Link to='userpage'>مخاطبین</Link>
           </li>
           <li>
             {" "}
             <BsCalendar4Event className='logo' />
-            <Link to='/'> رویدادها</Link>
+            <Link to='/reminderpage'> رویدادها</Link>
           </li>
           <li>
             {" "}
             <MdOutlinePhoneIphone className='logo' />
-            <Link to='/'>تماس با ما</Link>
+            <Link to='/callpage'>تماس با ما</Link>
           </li>
         </ul>
       </nav>
