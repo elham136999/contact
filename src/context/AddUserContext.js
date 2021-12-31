@@ -14,10 +14,16 @@ export const AdduserProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const AddUser = (event) => {
-    const name = event.target.value;
-    const numbers = event.targrt.value;
+    let name = event.target.value;
+    let numbers = event.targrt.value;
     if (name && numbers) {
-      dispatch({ type: ADD_USER, payload: { name, numbers } });
+      const user_list = {
+        id: new Date().getTime().toString(),
+        title: name,
+        number: numbers,
+      };
+
+      dispatch({ type: ADD_USER, payload: user_list });
     }
   };
 

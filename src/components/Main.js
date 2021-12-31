@@ -9,11 +9,22 @@ import List from "../components/List";
 function Main() {
   return (
     <div className='main'>
-      <Header />
-      <SidebarLeft />
-      <Contact />
-      <List />
-      <SidebarRight />
+      <div className='header'>
+        <Header />
+      </div>
+      <div className='sidebar_left'>
+        <SidebarLeft />
+      </div>
+      <div className='content'>
+        <Contact />
+      </div>
+      <div className='list'>
+        {" "}
+        <List />
+      </div>
+      <div className='sidebar_right'>
+        <SidebarRight />
+      </div>
     </div>
   );
 }
