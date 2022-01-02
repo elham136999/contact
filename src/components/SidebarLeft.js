@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SidebarLeft.scss";
 import { UseAdduserContext } from "../context/AddUserContext";
 
 function SidebarLeft() {
-  const { name, numbers, AddUser } = UseAdduserContext();
+  const { name, numbers, handleSubmit } = UseAdduserContext();
   return (
     <aside className='left'>
       <div>
-        <form className='forms' onSubmit={(e) => e.preventDefault()}>
+        <form className='forms' onSubmit={handleSubmit}>
           <input
             type='text'
             className='forms__input'
             placeholder='...نام و نام خانوادگی'
             value={name}
-            onChange={AddUser}
+            onChange={handleSubmit}
           />
           <input
             type='tel'
@@ -21,7 +21,7 @@ function SidebarLeft() {
             placeholder='...شماره مخاطب'
             pattern='[0-9]{11}'
             value={numbers}
-            onChange={AddUser}
+            onChange={handleSubmit}
           />
           <button className='forms__btn' type='submit'>
             ذخیره مخاطب جدید

@@ -1,5 +1,5 @@
 import React, { useReducer, useContext } from "react";
-import reducer from "../reducer/AdduserReducer";
+import AdduserReducer from "../reducer/AdduserReducer";
 import { ADD_USER } from "../components/actions";
 
 const AdduserContext = React.createContext();
@@ -11,24 +11,24 @@ const initialState = {
 };
 
 export const AdduserProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(AdduserReducer, initialState);
 
-  const AddUser = (event) => {
-    let name = event.target.value;
-    let numbers = event.targrt.value;
-    if (name && numbers) {
-      const user_list = {
-        id: new Date().getTime().toString(),
-        title: name,
-        number: numbers,
-      };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let name = e.target.value;
+    let numbers = e.target.value;
 
-      dispatch({ type: ADD_USER, payload: user_list });
-    }
+    const newlist = {
+      id: new Date().getTime().toString(),
+      title: name,
+      number: numbers,
+    };
+
+    dispatch({ type: ADD_USER, payload: [newlist] });
   };
 
   return (
-    <AdduserContext.Provider value={{ ...state, AddUser }}>
+    <AdduserContext.Provider value={{ ...state, handleSubmit }}>
       {children}
     </AdduserContext.Provider>
   );

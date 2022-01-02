@@ -13,7 +13,7 @@ const initialState = {
   loading: false,
 };
 
-const PersonContext = React.createContext();
+export const PersonContext = React.createContext();
 
 export const PersonProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
