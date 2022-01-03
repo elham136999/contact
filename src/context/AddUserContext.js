@@ -5,7 +5,7 @@ import { ADD_USER } from "../components/actions";
 const AdduserContext = React.createContext();
 
 const initialState = {
-  list: [{}],
+  list: [],
   name: "",
   numbers: "",
 };
@@ -15,16 +15,12 @@ export const AdduserProvider = ({ children }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let name = e.target.value;
-    let numbers = e.target.value;
-
-    const newlist = {
-      id: new Date().getTime().toString(),
-      title: name,
-      number: numbers,
+    const item = {
+      name: e.target.name,
+      input: e.target.value,
     };
 
-    dispatch({ type: ADD_USER, payload: [newlist] });
+    dispatch({ type: ADD_USER, payload: item });
   };
 
   return (

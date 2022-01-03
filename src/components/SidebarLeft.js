@@ -7,23 +7,23 @@ function SidebarLeft() {
   return (
     <aside className='left'>
       <div>
-        <form className='forms' onSubmit={handleSubmit}>
+        <form className='forms'>
           <input
             type='text'
             className='forms__input'
             placeholder='...نام و نام خانوادگی'
-            value={name}
             onChange={handleSubmit}
+            name='name'
           />
           <input
             type='tel'
             className='forms__input'
             placeholder='...شماره مخاطب'
             pattern='[0-9]{11}'
-            value={numbers}
             onChange={handleSubmit}
+            name='numbers'
           />
-          <button className='forms__btn' type='submit'>
+          <button className='forms__btn' type='submit' onClick={handleSubmit}>
             ذخیره مخاطب جدید
           </button>
         </form>
