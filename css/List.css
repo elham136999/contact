@@ -1,0 +1,11 @@
+.list {
+  margin: 2rem 0rem 2rem 18rem;
+  max-height: auto;
+  max-width: 20rem;
+  background-color: #dbd9d9;
+}
+
+.list__text {
+  display: block;
+}
+/*# sourceMappingURL=List.css.map */

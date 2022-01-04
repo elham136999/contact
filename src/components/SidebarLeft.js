@@ -13,6 +13,7 @@ function SidebarLeft() {
             className='forms__input'
             placeholder='...نام و نام خانوادگی'
             onChange={handleSubmit}
+            pattern='[a-zA-Z][ا-ی]{15}'
             name='name'
           />
           <input
