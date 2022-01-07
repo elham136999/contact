@@ -1,8 +1,4 @@
-import {
-  GET_USERS_BEGIN,
-  SUCCESE_GET_USERS,
-  ERROR_GET_USERS,
-} from "../components/actions";
+import { GET_USERS_BEGIN, SUCCESE_GET_USERS } from "../components/actions";
 
 const reducerperson = (state, action) => {
   switch (action.type) {

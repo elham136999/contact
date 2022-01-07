@@ -6,25 +6,19 @@ const AdduserContext = React.createContext();
 
 const initialState = {
   list: [],
-  name: "",
-  numbers: "",
 };
 
 export const AdduserProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AdduserReducer, initialState);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const item = {
-      name: e.target.name,
-      input: e.target.value,
-    };
-
-    dispatch({ type: ADD_USER, payload: item });
+  const value = {
+    addToItem: (name, numbers) => {
+      dispatch({ type: ADD_USER, payload: { name, numbers } });
+    },
   };
 
   return (
-    <AdduserContext.Provider value={{ ...state, handleSubmit }}>
+    <AdduserContext.Provider value={{ ...state, value }}>
       {children}
     </AdduserContext.Provider>
   );

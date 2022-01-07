@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SidebarLeft.scss";
 import { UseAdduserContext } from "../context/AddUserContext";
 
 function SidebarLeft() {
-  const { name, numbers, handleSubmit } = UseAdduserContext();
+  const [name, setName] = useState("");
+  const [numbers, setNumbers] = useState("");
+
+  const { addToItem } = UseAdduserContext();
+  console.log(name);
+  console.log(numbers);
+
   return (
     <aside className='left'>
       <div>
-        <form className='forms'>
+        <form className='forms' onSubmit={(e) => e.preventDefault()}>
           <input
             type='text'
             className='forms__input'
             placeholder='...نام و نام خانوادگی'
-            onChange={handleSubmit}
-            pattern='[a-zA-Z][ا-ی]{15}'
+            onChange={(e) => setName(e.target.value)}
             name='name'
+            value={name}
           />
           <input
             type='tel'
             className='forms__input'
             placeholder='...شماره مخاطب'
-            pattern='[0-9]{11}'
-            onChange={handleSubmit}
+            onChange={(e) => setNumbers(e.target.value)}
             name='numbers'
+            value={numbers}
           />
-          <button className='forms__btn' type='submit' onClick={handleSubmit}>
+
+          <button
+            className='forms__btn'
+            type='submit'
+            onClick={() => addToItem(name, numbers)}>
             ذخیره مخاطب جدید
           </button>
         </form>
